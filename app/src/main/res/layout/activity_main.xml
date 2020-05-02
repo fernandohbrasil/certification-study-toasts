@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lbl_title"
+                style="@style/title_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/toast_tests"
+                app:layout_constraintBaseline_creator="@android:integer/config_longAnimTime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_gravity"
+                style="@style/label_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:inputType="textCapSentences"
+                android:text="@string/gravity"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_title" />
+
+            <Spinner
+                android:id="@+id/sp_gravity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/lbl_gravity" />
+
+            <TextView
+                android:id="@+id/lbl_xOffset"
+                style="@style/label_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/xOffset"
+                app:layout_constraintTop_toBottomOf="@+id/sp_gravity" />
+
+            <EditText
+                android:id="@+id/edt_xOffset"
+                style="@style/edit_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="0"
+                app:layout_constraintTop_toBottomOf="@id/lbl_xOffset" />
+
+            <TextView
+                android:id="@+id/lbl_yOffset"
+                style="@style/label_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/yOffset"
+                app:layout_constraintTop_toBottomOf="@+id/edt_xOffset" />
+
+            <EditText
+                android:id="@+id/edt_yOffset"
+                style="@style/edit_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="0"
+                app:layout_constraintTop_toBottomOf="@id/lbl_yOffset" />
+
+            <TextView
+                android:id="@+id/lbl_horizontal_margin"
+                style="@style/label_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/horizontal_margin"
+                app:layout_constraintTop_toBottomOf="@+id/edt_yOffset" />
+
+            <EditText
+                android:id="@+id/edt_horizontal_margin"
+                style="@style/edit_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="0.0"
+                app:layout_constraintTop_toBottomOf="@id/lbl_horizontal_margin" />
+
+            <TextView
+                android:id="@+id/lbl_vertical_margin"
+                style="@style/label_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Vertical Margin"
+                app:layout_constraintTop_toBottomOf="@+id/edt_horizontal_margin" />
+
+            <EditText
+                android:id="@+id/edt_vertical_margin"
+                style="@style/edit_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="0.0"
+                app:layout_constraintTop_toBottomOf="@id/lbl_vertical_margin" />
+
+            <TextView
+                android:id="@+id/lbl_duration"
+                style="@style/label_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/duration"
+                app:layout_constraintTop_toBottomOf="@+id/edt_vertical_margin" />
+
+            <RadioGroup
+                android:id="@+id/rg_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/lbl_duration">
+
+                <RadioButton
+                    android:id="@+id/rb_short"
+                    style="@style/label_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:gravity="center|start"
+                    android:text="@string/short_duration" />
+
+                <RadioButton
+                    android:id="@+id/rb_long"
+                    style="@style/label_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/long_duration" />
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toTopOf="@id/btn_show"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/show"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Google Certification Study Toast</string>
+    <string name="show">Show</string>
+    <string name="cancel">Cancel</string>
+    <string name="toast_tests">Toast Tests</string>
+    <string name="gravity">Gravity</string>
+    <string name="xOffset">xOffset</string>
+    <string name="yOffset">yOffset</string>
+    <string name="duration">Duration</string>
+    <string name="horizontal_margin">Horizontal Margin</string>
+    <string name="short_duration">Short</string>
+    <string name="long_duration">Long</string>
+
+    <string-array name="gravity_values">
+        <item>Gravity.CENTER</item>
+        <item>Gravity.START</item>
+        <item>Gravity.BOTTOM</item>
+        <item>Gravity.CENTER_HORIZONTAL</item>
+        <item>Gravity.CENTER_VERTICAL</item>
+        <item>Gravity.CLIP_HORIZONTAL</item>
+        <item>Gravity.CLIP_VERTICAL</item>
+        <item>Gravity.END</item>
+        <item>Gravity.FILL</item>
+        <item>Gravity.FILL_HORIZONTAL</item>
+        <item>Gravity.FILL_VERTICAL</item>
+        <item>Gravity.TOP</item>
+    </string-array>
+
+</resources>
