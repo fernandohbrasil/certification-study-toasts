@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.view.Gravity
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import android.widget.Toast.Callback
 import androidx.appcompat.app.AppCompatActivity
 import com.fernando.googlecertificationstudytoast.databinding.ActivityMainBinding
 
-
 const val msg = "This is your Toast"
+const val toastShowing = "Your Toast is Showing"
+const val toastHidden = "Your Toast is Hidden"
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,6 +25,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         toast = Toast.makeText(this, msg, Toast.LENGTH_LONG)
+
+        toast.addCallback(CallBackToast(binding))
 
         spinnerBind()
 
@@ -118,5 +122,17 @@ class MainActivity : AppCompatActivity() {
             binding.spGravity.adapter = adapter
         }
     }
+}
 
+class CallBackToast(private val binding: ActivityMainBinding) : Callback() {
+
+    override fun onToastHidden() {
+        super.onToastHidden()
+        binding.lblTitle.text = toastShowing
+    }
+
+    override fun onToastShown() {
+        super.onToastShown()
+        binding.lblTitle.text = toastHidden
+    }
 }
