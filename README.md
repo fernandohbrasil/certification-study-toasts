@@ -19,7 +19,7 @@ The following methods were covered
 SDK R
 * void addCallback(Toast.Callback callback)
 
-Note: Up to Sdk 29, it was possible to customize a view to use in Toast. However in the Android R version, this will be deprecated. So I chose not to implement this, as this will be exclusive content for Snackbar, as recommended by the official documentation.
+Note: Up to Sdk 29, it was possible to customize a view to use in Toast. However in the Android R version, this will be deprecated. So I chose not to implement this, as this will be exclusive content for [Snackbar](https://developer.android.com/reference/com/google/android/material/snackbar/Snackbar), as recommended by the official documentation.
 
 ## This Repository
 
