@@ -39,4 +39,4 @@ This repository currently has 2 branches.
 
 This App is really simple, and was focused just in [Toast](https://developer.android.com/reference/android/widget/Toast), so no specific architecture was observed. Feel free to use this example to start your studys, change the code and add in your repository also.
 
-Any question, bug or request. Open a issue!
+Any question, bug or request. Open an issue!
