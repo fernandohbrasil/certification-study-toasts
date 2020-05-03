@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        binding.lblTitle.text = toastHidden
+
         toast = Toast.makeText(this, msg, Toast.LENGTH_LONG)
 
         toast.addCallback(CallBackToast(binding))
@@ -128,11 +130,11 @@ class CallBackToast(private val binding: ActivityMainBinding) : Callback() {
 
     override fun onToastHidden() {
         super.onToastHidden()
-        binding.lblTitle.text = toastShowing
+        binding.lblTitle.text = toastHidden
     }
 
     override fun onToastShown() {
         super.onToastShown()
-        binding.lblTitle.text = toastHidden
+        binding.lblTitle.text = toastShowing
     }
 }
