@@ -17,11 +17,12 @@ The following methods were covered
 SDK 29
 * void setGravity(int gravity, int xOffset, int yOffset)
 * void setMargin(float horizontalMargin, float verticalMargin)
+* void  setView(View view)
 
 SDK R
 * void addCallback(Toast.Callback callback)
 
-Note: Up to Sdk 29, it was possible to customize a view to use in Toast. However in the Android R version, this will be deprecated. So I chose not to implement this, as this will be exclusive content for [Snackbar](https://developer.android.com/reference/com/google/android/material/snackbar/Snackbar), as recommended by the official documentation.
+Note: Up to Sdk 29, we had more options to customize a Toast. However in the Android R version, some of them will be deprecated. So if you need more versatile you should use [Snackbar](https://developer.android.com/reference/com/google/android/material/snackbar/Snackbar), as Android documentation recommends.
 
 ## Screenshots
 
