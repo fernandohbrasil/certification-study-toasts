@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.fernando.googlecertificationstudytoast.databinding.ActivityMainBinding
+import com.fernando.googlecertificationstudytoast.databinding.CustomToastBinding
 
 
 const val msg = "This is your Toast"
@@ -13,6 +14,7 @@ const val msg = "This is your Toast"
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var toastBinding: CustomToastBinding
 
     private lateinit var toast: Toast
 
@@ -44,6 +46,21 @@ class MainActivity : AppCompatActivity() {
         toast.setMargin(getHorizontalMargin(), getVerticalMargin())
         toast.duration = getDuration()
 
+        showToast()
+    }
+
+    private fun showToast() {
+        if (binding.rbCustom.isChecked) {
+            customToast()
+        } else {
+            toast.show()
+        }
+    }
+
+    private fun customToast() {
+        toastBinding = CustomToastBinding.inflate(layoutInflater)
+        toastBinding.text.text = msg
+        toast.view = toastBinding.root
         toast.show()
     }
 

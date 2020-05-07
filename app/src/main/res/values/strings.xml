@@ -10,6 +10,9 @@
     <string name="horizontal_margin">Horizontal Margin</string>
     <string name="short_duration">Short</string>
     <string name="long_duration">Long</string>
+    <string name="type_of_toast">Type of Toast</string>
+    <string name="regular_toast">Regular Toast</string>
+    <string name="custom_toast">Custom Toast</string>
 
     <string-array name="gravity_values">
         <item>Gravity.CENTER</item>

@@ -10,6 +10,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@id/btn_cancel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -152,6 +153,42 @@
                     android:gravity="center|start"
                     android:text="@string/long_duration" />
             </RadioGroup>
+
+            <TextView
+                android:id="@+id/lbl_type"
+                style="@style/label_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/type_of_toast"
+                app:layout_constraintTop_toBottomOf="@id/rg_duration" />
+
+            <RadioGroup
+                android:id="@+id/rg_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/lbl_type">
+
+                <RadioButton
+                    android:id="@+id/rb_regular"
+                    style="@style/label_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:gravity="center|start"
+                    android:text="@string/regular_toast" />
+
+                <RadioButton
+                    android:id="@+id/rb_custom"
+                    style="@style/label_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/custom_toast" />
+            </RadioGroup>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
@@ -159,7 +196,6 @@
         android:id="@+id/btn_cancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
         android:padding="10dp"
         android:text="@string/cancel"
         app:layout_constraintBottom_toTopOf="@id/btn_show"
